@@ -1,0 +1,108 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert Title here</title>
+
+</head>
+
+<body>
+	<section>
+		<div class="container admin-dashboard-container">
+			<p class="admin-dashboard-title">Admin Dashboard</p>
+			<div class="row p-5">
+				<div class="col-md-4 mt-2">
+					<a href="/admin/loadAddProduct" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-square-plus fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Add Product</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-2">
+					<a href="/admin/category" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-list fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Add Category</h4class="admin-card-title">
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-2">
+					<a href="/admin/products" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-table-list fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">View Product</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-4">
+					<a href="/admin/orders" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-box-open fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Orders</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-4">
+					<a href="/admin/users?type=1" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-circle-user fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Users</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-4">
+					<a href="/admin/add-admin" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-user-plus fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Add Admin</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 mt-4">
+					<a href="/admin/users?type=2" class="text-decoration-none">
+						<div class="card card-sh admin-dashboard-card">
+							<div class="card-body text-center admin-dashboard-body">
+								<i class="fa-solid fa-circle-user fa-4x mb-3 admin-card-icon"></i>
+								<h4 class="admin-card-title">Admin</h4>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+				<div class="col-md-4 mt-4">
+				    <a href="/admin/all-reviews" class="text-decoration-none">
+				        <div class="card card-sh admin-dashboard-card">
+				            <div class="card-body text-center admin-dashboard-body">
+				                <i class="fa-solid fa-star fa-4x mb-3 admin-card-icon"></i>
+				                <h4 class="admin-card-title">Reviews</h4>
+				            </div>
+				        </div>
+				    </a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

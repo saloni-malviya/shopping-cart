@@ -1,0 +1,165 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert Title here</title>
+
+</head>
+
+<body>
+	<section>
+		<div class="container admin-page-container admin-product-page">
+			<div class="row">
+				<div class="admin-page-header">
+					<h2 class="admin-table-title">All Products</h2>
+				</div>
+				<a href="/admin/" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i>Back</a>
+				<th:block th:if="${session.succMsg}">
+					<p class="text-success fw-bold text-center">[[${session.succMsg}]]</p>
+					<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+				</th:block>
+
+				<th:block th:if="${session.errorMsg}">
+					<p class="text-danger fw-bold text-center">[[${session.errorMsg}]]</p>
+					<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+				</th:block>
+
+				<div class="col-lg-6 col-md-8 mx-auto">
+					<div class="admin-search-card admin-search-modern">
+						<form action="/admin/products" method="get">
+							<div class="row g-2 align-items-center">
+								<div class="col-md-9">
+									<input type="text" class="form-control admin-search-input" name="ch"
+										placeholder="Search Product By Name, Category...">
+								</div>
+								<div class="col-md-3">
+									<button class="btn admin-search-btn w-100">
+										<i class="fa-solid fa-magnifying-glass me-1"></i>Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+
+				<!--<div class="card card-sh"> 
+				
+				<div class="card-body"> -->
+				<div class="admin-table-wrapper premium-product-table-wrapper">
+					<table class="table modern-admin-table premium-product-table">
+						<thead class="table-light">
+							<tr>
+								<th scope="col">S.No.</th>
+								<th scope="col">Image</th>
+								<th scope="col">Title</th>
+								<th scope="col">Category</th>
+								<th scope="col">Price</th>
+								<th scope="col">Discount</th>
+								<th scope="col">Discount Price</th>
+								<th scope="col">Status</th>
+								<th scope="col">Stock</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="p,c:${products}">
+								<th scope="row">[[${c.count}]]</th>
+                         <!-- @{'/uploads/Product/'+${p.image}} -->
+								<td><img th:src="${imageHelper.getProductImageUrl(p.image)}" class="table-product-img"></td>
+								<td>[[${p.title}]]</td>
+								<td>[[${p.category}]]</td>
+								<td>[[${p.price}]]</td>
+								<td>[[${p.discount}]]</td>
+								<td>[[${p.discountPrice}]]</td>
+								<!--	<td>[[${p.isActive}]]</td>   -->
+								<td>
+
+									<span th:if="${p.isActive}" class="status-pill status-success">
+
+										Active
+
+									</span>
+
+									<span th:unless="${p.isActive}" class="status-pill status-danger">
+
+										Inactive
+
+									</span>
+
+								</td>
+
+								<td>[[${p.stock}]]</td>
+
+								<td class="action-column">
+									<a th:href="@{'/admin/editProduct/'+${p.id}}" class="admin-edit-btn"><i
+											class="fa-solid fa-pen-to-square"></i>Edit</a>
+
+									<a th:href="@{'/admin/deleteProduct/'+${p.id}}" class="admin-delete-btn"><i
+											class="fa-solid fa-trash"></i>Delete</a>
+
+								</td>
+
+								<!--			<a th:href="@{'/admin/loadEditCategory/'+${cat.id}}"
+										class="btn btn-primary btn-sm"><i
+											class="fa-solid fa-pen-to-square"></i>Edit</a>
+
+									<a th:href="@{'/admin/deleteCategory/'+${cat.id}}" class="btn btn-danger btn-sm"><i
+											class="fa-solid fa-trash"></i>Delete</a>  -->
+
+
+							</tr>
+
+						</tbody>
+					</table>
+
+
+
+					<!--Start pagination-->
+					<div class="row">
+						<div class="col-md-4">
+							<div class="total-category-box">Total Products : <span>[[${totalElements}]]</span> </div>
+							<div class="total-category-box mt-2">
+							    Active Products : <span class="text-success">[[${activeProducts}]]</span>
+							</div>
+							<div class="total-category-box mt-2">
+							    Inactive Products : <span class="text-danger">[[${inactiveProducts}]]</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+
+							<nav aria-label="Page navigation example">
+								<ul class="pagination">
+									<li class="page-item" th:classappend="${isFirst} ? 'disabled':''">
+										<a class="page-link" th:href="@{'/admin/products?pageNo='+${pageNo-1}}"
+											aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li th:each="i:${#numbers.sequence(1,totalPages)}" class="page-item"
+										th:classappend="${pageNo+1==i}?'active':'' " }]><a class="page-link"
+											th:href="@{'/admin/products?pageNo='+${i-1}}">[[${i}]]</a>
+									</li>
+
+									<li class="page-item" th:classappend="${isLast} ? 'disabled':''">
+										<a class="page-link" th:href="@{'/admin/products?pageNo='+${pageNo+1}}"
+											aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+
+						</div>
+
+					</div>
+					<!--End pagination-->
+				</div>
+			</div>
+		</div>
+		<!--</div>
+		</div>-->
+	</section>
+</body>
+
+</html>

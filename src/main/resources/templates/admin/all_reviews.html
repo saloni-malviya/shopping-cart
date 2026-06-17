@@ -1,0 +1,104 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>All Reviews - Admin</title>
+</head>
+
+<body>
+    <section>
+        <div class="container admin-page-container admin-product-page">
+            <div class="row">
+                <div class="admin-page-header">
+                    <h2 class="admin-table-title">All Reviews</h2>
+					<th:block th:if="${session.succMsg}">
+											<p class="text-success fw-bold">[[${session.succMsg}]]</p>
+											<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+										</th:block>
+
+										<th:block th:if="${session.errorMsg}">
+											<p class="text-danger fw-bold">[[${session.errorMsg}]]</p>
+											<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+										</th:block>
+                </div>
+                <a href="/admin/" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i>Back</a>
+                
+                <!-- Stats Cards -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="total-category-box">Total Reviews : <span>[[${totalReviews}]]</span></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="total-category-box text-success">Approved : <span>[[${approvedReviews}]]</span></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="total-category-box text-warning">Pending : <span>[[${pendingReviews}]]</span></div>
+                    </div>
+                </div>
+                
+                <div class="admin-table-wrapper premium-product-table-wrapper">
+                    <table class="table modern-admin-table premium-product-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Product</th>
+                                <th>Rating</th>
+                                <th>Review</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="review,stat : ${reviews}">
+                                <td>[[${stat.count}]]</td>
+                                <td>[[${review.user.name}]]</td>
+                                <td>[[${review.product.title}]]</td>
+                     <!--           <td>
+                                    <span th:each="i: ${#numbers.sequence(1, review.rating)}">★</span>
+                                    <span th:each="i: ${#numbers.sequence(review.rating+1, 5)}">☆</span>
+                                </td>  -->
+								
+								<td>
+								    <!-- Filled Stars -->
+								    <span th:each="i : ${#numbers.sequence(1, review.rating)}"
+								          class="text-warning">★</span>
+
+								    <!-- Empty Stars -->
+								    <span th:if="${review.rating < 5}"
+								          th:each="i : ${#numbers.sequence(1, 5 - review.rating)}"
+								          class="text-muted">☆</span>
+								</td>
+								
+                                <td style="max-width: 300px;">[[${review.reviewText}]]</td>
+                                <td>[[${#temporals.format(review.reviewDate, 'dd MMM yyyy')}]]</td>
+                                <td>
+                                    <span th:if="${review.isApproved}" class="status-pill status-success">Approved</span>
+                                    <span th:unless="${review.isApproved}" class="status-pill status-warning">Pending</span>
+                                </td>
+                                <td class="action-column">
+                                    <form action="/admin/update-review-status" method="post" style="display: inline;">
+                                        <input type="hidden" name="id" th:value="${review.id}">
+                                        <input type="hidden" name="status" th:value="${!review.isApproved}">
+                                        <button class="admin-edit-btn btn-sm" type="submit">
+                                            <span th:if="${review.isApproved}">Disapprove</span>
+                                            <span th:unless="${review.isApproved}">Approve</span>
+                                        </button>
+                                    </form>
+                                    <a th:href="@{'/admin/delete-review/'+${review.id}}" 
+                                       class="admin-delete-btn btn-sm ms-2"
+                                       onclick="return confirm('Delete this review?')">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

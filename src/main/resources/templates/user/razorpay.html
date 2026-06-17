@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+			background: linear-gradient(135deg,#4f46e5,#7c3aed);
+            margin: 0;
+        }
+      /*  .payment-box {
+			background: rgba(255,255,255,.95);
+			    padding: 50px;
+			    border-radius: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 400px;
+        }
+        .amount {
+            font-size: 48px;
+            color: #3399ff;
+            margin: 20px 0;
+        }*/
+		.payment-box{
+		    background:rgba(255,255,255,.92);
+		    backdrop-filter:blur(20px);
+
+		    border-radius:32px;
+
+		    border:2px solid rgba(255,255,255,.4);
+
+		    box-shadow:
+		    0 25px 60px rgba(91,33,182,.30);
+
+		    padding:60px;
+			font-size:25px;
+		}
+		.amount{
+		    font-size:40px;
+		    font-weight:800;
+
+		    background:
+		    linear-gradient(
+		    135deg,
+		    #4f46e5,
+		    #9333ea
+		    );
+
+		    -webkit-background-clip:text;
+		    -webkit-text-fill-color:transparent;
+		}
+		
+        button {
+			background: linear-gradient(135deg,#4f46e5,#7c3aed);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:disabled {
+            background: #ccc;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        .loader {
+            display: none;
+            margin: 10px auto;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3399ff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-box">
+        <h2>Secure Payment</h2>
+        <div class="amount">₹ <span th:text="${amount}">0</span></div>
+        <div class="loader" id="loader"></div>
+        <div class="error" id="error"></div>
+        <button id="payBtn">Pay Now</button>
+    </div>
+
+    <script th:inline="javascript">
+        var userName = /*[[${user != null ? user.name : ''}]]*/ '';
+        var userEmail = /*[[${user != null ? user.email : ''}]]*/ '';
+        var userMobile = /*[[${user != null ? user.mobileNumber : ''}]]*/ '';
+    </script>
+
+    <script>
+        console.log("Page loaded - testing console");
+        
+        document.getElementById('payBtn').onclick = function() {
+            console.log("Button clicked! Making AJAX call...");
+            
+            var btn = this;
+            var loader = document.getElementById('loader');
+            var errorDiv = document.getElementById('error');
+            
+            btn.disabled = true;
+            loader.style.display = 'block';
+            errorDiv.style.display = 'none';
+            
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/payment/create-order', true);
+            
+            xhr.onload = function() {
+                loader.style.display = 'none';
+                console.log("Response status:", xhr.status);
+                console.log("Response text:", xhr.responseText);
+                
+                if (xhr.status === 200) {
+                    try {
+                        var data = JSON.parse(xhr.responseText);
+                        console.log("Parsed data:", data);
+                        
+                        if (data.error) {
+                            errorDiv.textContent = data.error;
+                            errorDiv.style.display = 'block';
+                            btn.disabled = false;
+                            return;
+                        }
+                        
+                        var options = {
+                            key: data.key,
+                            amount: data.amount,
+                            currency: data.currency,
+                            name: "Ecom Store",
+                            description: "Order Payment",
+                            order_id: data.id,
+                            handler: function(response) {
+                                console.log("Payment success:", response);
+                                // Verify payment
+                                var verifyXhr = new XMLHttpRequest();
+                                verifyXhr.open('POST', '/payment/verify', true);
+                                verifyXhr.setRequestHeader('Content-Type', 'application/json');
+                                verifyXhr.onload = function() {
+                                    if (verifyXhr.status === 200) {
+                                        var result = JSON.parse(verifyXhr.responseText);
+                                        if (result.status === 'success') {
+                                            window.location.href = '/user/success';
+                                        } else {
+                                            alert('Payment verification failed: ' + result.message);
+                                            window.location.href = '/user/cart';
+                                        }
+                                    }
+                                };
+                               // verifyXhr.send(JSON.stringify(response));
+								verifyXhr.send(JSON.stringify({
+								    razorpayOrderId: response.razorpay_order_id,
+								    razorpayPaymentId: response.razorpay_payment_id,
+								    razorpaySignature: response.razorpay_signature,
+								    paymentType: "ONLINE"
+								}));
+                            },
+                            prefill: {
+                                name: userName,
+                                email: userEmail,
+                                contact: userMobile
+                            },
+                            theme: { color: "#3399ff" },
+                            modal: {
+                                ondismiss: function() {
+                                    btn.disabled = false;
+                                }
+                            }
+                        };
+                        
+                        var rzp = new Razorpay(options);
+                        rzp.open();
+                        btn.disabled = false;
+                        
+                    } catch(e) {
+                        console.error("Parse error:", e);
+                        errorDiv.textContent = "Invalid response from server";
+                        errorDiv.style.display = 'block';
+                        btn.disabled = false;
+                    }
+                } else {
+                    errorDiv.textContent = "Server error: " + xhr.status;
+                    errorDiv.style.display = 'block';
+                    btn.disabled = false;
+                }
+            };
+            
+            xhr.onerror = function() {
+                loader.style.display = 'none';
+                errorDiv.textContent = "Network error - cannot connect to server";
+                errorDiv.style.display = 'block';
+                btn.disabled = false;
+                console.error("Network error occurred");
+            };
+            
+            xhr.send();
+        };
+    </script>
+</body>
+</html>

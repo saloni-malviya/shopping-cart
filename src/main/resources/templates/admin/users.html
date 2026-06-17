@@ -1,0 +1,114 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert Title here</title>
+
+</head>
+
+<body>
+	<section>
+		<div class="container admin-page-container admin-product-page"> 
+		
+		
+				<div class="admin-page-header text-center">
+					<h2 class="admin-table-title" th:if="${userType==1}">Users</h2>
+					<h2 class="admin-table-title" th:if="${userType==2}">Admin</h2>
+					
+					<th:block th:if="${session.succMsg}">
+						<p class="text-success fw-bold">[[${session.succMsg}]]</p>
+						<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+					</th:block>
+
+					<th:block th:if="${session.errorMsg}">
+						<p class="text-danger fw-bold">[[${session.errorMsg}]]</p>
+						<th:block th:text="${@commonServiceImpl.removeSessionMessage()}"></th:block>
+					</th:block>
+					</div>
+					<div class="admin-table-wrapper premium-product-table-wrapper">
+				<div class="table-responsive">
+				<table class="table modern-admin-table premium-product-table">  
+				
+					
+						<thead>
+							<tr>
+								<th scope="col">S.No.</th>
+								<th scope="col">Profile</th>
+								<th scope="col">Name</th>
+								<th scope="col">Email</th>
+								<th scope="col">Mobile No</th>
+								<th scope="col">Address</th>
+								<th scope="col">Status</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="u,c:${users}">
+								<th scope="row">[[${c.count}]]</th>
+<!-- @{'/uploads/profile_img/'+${u.profileImage}} -->
+								<td><img th:src="${imageHelper.getProfileImageUrl(u.profileImage)}"
+										class="table-product-img">
+								</td>
+								<td>[[${u.name}]]</td>
+								<td>[[${u.email}]]</td>
+								<td>[[${u.mobileNumber}]]</td>
+								<td>[[${u.address+','+u.city+','+u.state+','+u.pincode}]]</td>
+								<!--		<td>[[${u.isEnable}]]</td>-->
+
+								<td>
+
+									<span th:if="${u.isEnable}" class="status-pill status-active">
+
+										Active
+
+									</span>
+
+									<span th:unless="${u.isEnable}" class="status-pill status-inactive">
+
+										Inactive
+
+									</span>
+
+								</td>
+
+
+								<td class="action-buttons">
+									<a th:href="@{'/admin/updateSts?status=true&id='+${u.id}}+'&type='+${userType}"
+										class="table-action-btn active-btn">Active</a>
+
+									<a th:href="@{'/admin/updateSts?status=false&id='+${u.id}}+'&type='+${userType}"
+										class="table-action-btn inactive-btn">Inactive</a>
+
+								</td>
+
+								<!--			<a th:href="@{'/admin/loadEditCategory/'+${cat.id}}"
+										class="btn btn-primary btn-sm"><i
+											class="fa-solid fa-pen-to-square"></i>Edit</a>
+
+									<a th:href="@{'/admin/deleteCategory/'+${cat.id}}" class="btn btn-danger btn-sm"><i
+											class="fa-solid fa-trash"></i>Delete</a>  -->
+
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<div class="row mb-4">
+			    <div class="col-12">
+			        <div class="d-flex flex-wrap gap-2 justify-content-center">
+			            <div class="total-category-box">Total Users : <span>[[${totalUsers}]]</span></div>
+			            <div class="total-category-box text-success">Active : <span>[[${activeUsers}]]</span></div>
+			            <div class="total-category-box text-danger">Inactive : <span>[[${inactiveUsers}]]</span></div>
+			        </div>
+			    </div>
+			</div>
+			
+		</div>
+	</section>
+</body>
+
+</html>

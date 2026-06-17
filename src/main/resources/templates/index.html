@@ -1,0 +1,172 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert Title here</title>
+
+</head>
+
+<body>
+	<section>
+		<!-- Start Slider-->
+		<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" >
+			
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/gemini1.png" class="d-block w-100" alt="Electronics Banner" >
+				</div>
+				<div class="carousel-item">
+					<img src="img/gemini2.png" class="d-block w-100" alt="Fashion Banner">
+				</div>
+				<div class="carousel-item">
+					<img src="img/gemini3.png" class="d-block w-100" alt="Accessories Banner">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!-- End Slider -->
+
+		<!-- Start Category Module-->
+		<div class="container mt-4 category-section shadow-sm">
+			<div class="row">
+				<p class="section-title">Shop By Category</p>    
+			
+				
+				
+				<div class="col-md-2" th:each="c:${category}">    
+				
+		<!--			<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">     -->
+			<div class="category-card">
+						<div class="card-body text-center">
+				<!--			<img th:src="@{'/uploads/Category_img/'+${c.imageName}}">  -->
+						<img th:src="${imageHelper.getCategoryImageUrl(c.imageName)}">	<br>
+							<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none category-title">[[${c.name}]]</a>
+						</div>
+					</div>
+				</div>
+			
+	<!--		<img th:src="@{'img/Category_img/'+${c.imageName}}    -->	
+
+			<!--	<div class="col-md-2">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/Category/beauty.png" width="65%" height="140px">
+							<p>Beauty</p>
+						</div>
+					</div>
+				</div>
+				-->	
+				<!--
+				<div class="col-md-2">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/Category/cloth.jpg" width="65%" height="140px">
+							<p>Clothes</p>
+						</div>
+					</div>
+				</div>
+				-->
+				<!--
+				<div class="col-md-2">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/Product/laptop.jpg" width="65%" height="140px">
+							<p>Laptop</p>
+						</div>
+					</div>
+				</div>
+				-->
+				<!--
+				<div class="col-md-2">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/Category/mobile.jpg" width="65%" height="140px">
+							<p>Mobile</p>
+						</div>
+					</div>
+				</div>
+				-->
+				<!--
+				<div class="col-md-2">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/Category/grocery.jpg" width="65%" height="140px">
+							<p>Grocery</p>
+						</div>
+					</div>
+				</div>
+				-->
+
+			</div>
+		</div>
+		<!-- End Category Module -->
+
+		<!-- Start Lateset Product Module -->
+		<div class="container-fluid latest-products-section">
+			<div class="row g-4">
+				<p class="section-title">Latest Product</p>    
+				
+			<!--	<div class="col-md-3" th:each="p:${products}">     -->
+					<div class="col-lg-3 col-md-4 col-sm-6 mb-4" th:each="p:${products}">
+	<!--			<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">   -->	
+		<div class="product-card">
+						<div class="card-body text-center">
+				<!--		<img alt="" th:src="@{'/uploads/Product/'+${p.image}}" class="product-img">  -->	
+				<img alt="" th:src="${imageHelper.getProductImageUrl(p.image)}" class="product-img">
+							<p class="text-center product-title p-2"><a th:href="@{'/product/'+${p.id}}" class="text-decoration-none">[[${p.title}]]</a></p>
+							
+						</div>
+					</div>
+				</div>
+
+				<!--
+				<div class="col-md-3">
+					<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img alt="" src="img/Product/laptop.jpg" class="" width="65%" height="140px">
+							<p class="text-center">HP Laptop</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img alt="" src="img/Product/laptop.jpg" class="" width="65%" height="140px">
+							<p class="text-center">HP Laptop</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img alt="" src="img/Product/laptop.jpg" class="" width="65%" height="140px">
+							<p class="text-center">HP Laptop</p>
+						</div>
+					</div>
+				</div>
+				-->
+			</div></div>
+			<div class="text-center mt-4">
+				<a href="/products" class="btn btn-primary px-5">
+					View All Products
+				</a>
+			</div>
+			
+		
+
+		<!-- End Latest Product Module -->
+	</section>
+
+</body>
+
+</html>

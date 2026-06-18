@@ -448,7 +448,7 @@ public class AdminController {
 	    m.addAttribute("totalUsers", userService.getTotalUserCount(role));
 	    m.addAttribute("activeUsers", userService.getActiveUserCount(role));
 	    m.addAttribute("inactiveUsers", userService.getInactiveUserCount(role));
-		return "/admin/users";
+		return "admin/users";
 
 	}
 
@@ -491,7 +491,7 @@ public class AdminController {
 	    m.addAttribute("deliveredOrders", orderService.getOrderCountByStatus("Delivered"));
 	    m.addAttribute("cancelledOrders", orderService.getOrderCountByStatus("Cancelled"));
 		
-		return "/admin/orders";
+		return "admin/orders";
 	}
 
 	@PostMapping("/update-order-status")
@@ -551,12 +551,12 @@ public class AdminController {
 				m.addAttribute("isFirst", page.isFirst());
 				m.addAttribute("isLast", page.isLast());
 		}
-		return "/admin/orders";
+		return "admin/orders";
 	}
 	
 	@GetMapping("/add-admin")
 	public String loadAdminAdd() {
-		return "/admin/add_admin";
+		return "admin/add_admin";
 	}
 	
 	@PostMapping("/save-admin")
@@ -603,7 +603,7 @@ public class AdminController {
 
 	@GetMapping("/profile")
 	public String profile() {
-		return "/admin/profile";
+		return "admin/profile";
 	}
 	
 	@PostMapping("/update-profile")

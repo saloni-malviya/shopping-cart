@@ -106,7 +106,7 @@ public class UserController {
 			        .sum();
 		m.addAttribute("totalOrderPrice",totalOrderPrice);
 		}
-		return "/user/cart";
+		return "user/cart";
 		
 	}
 	
@@ -140,7 +140,7 @@ public class UserController {
 			
 			
 		}
-		return "/user/order";
+		return "user/order";
 	}
 	
 	
@@ -212,12 +212,12 @@ public class UserController {
 	    Double amount = (Double) session.getAttribute("razorpayAmount");
 	    m.addAttribute("amount", amount);
 	    m.addAttribute("user", user);
-	    return "/user/razorpay";
+	    return "user/razorpay";
 	}
 	
 	@GetMapping("/success")
 	public String loadSuccess() {
-		return "/user/success";
+		return "user/success";
 	}
 	
 	@GetMapping("/user-orders")
@@ -225,7 +225,7 @@ public class UserController {
 		UserDtls loginUser = getLoggedInUserDetails(p);
 		List<ProductOrder> orders = orderService.getOrdersByUser(loginUser.getId());
 		m.addAttribute("orders",orders);
-		return "/user/my_orders";
+		return "user/my_orders";
 	}
 	
 	@GetMapping("/update-status")
@@ -252,7 +252,7 @@ public class UserController {
 	
 	@GetMapping("/profile")
 	public String profile() {
-		return "/user/profile";
+		return "user/profile";
 	}
 	
 	@PostMapping("/update-profile")

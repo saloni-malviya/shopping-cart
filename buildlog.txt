@@ -1,0 +1,642 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.ecom:Shopping_Cart >-----------------------
+[INFO] Building Shopping_Cart 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ Shopping_Cart ---
+[INFO] Deleting C:\Users\Rajeshmalviya\Documents\sts-workspace-youtube\Shopping_Cart3\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Shopping_Cart ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 55 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ Shopping_Cart ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 55 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/HomeController.java: C:\Users\Rajeshmalviya\Documents\sts-workspace-youtube\Shopping_Cart3\src\main\java\com\ecom\controller\HomeController.java uses or overrides a deprecated API.
+[INFO] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/HomeController.java: Recompile with -Xlint:deprecation for details.
+[INFO] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CloudinaryImageServiceImpl.java: C:\Users\Rajeshmalviya\Documents\sts-workspace-youtube\Shopping_Cart3\src\main\java\com\ecom\service\impl\CloudinaryImageServiceImpl.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CloudinaryImageServiceImpl.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[61,63] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[69,34] invalid method reference
+  cannot find symbol
+    symbol:   method getTotalPrice(T)
+    location: class com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[81,37] cannot find symbol
+  symbol:   method getId()
+  location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[82,41] cannot find symbol
+  symbol:   method getAmount()
+  location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[83,43] cannot find symbol
+  symbol:   method getCurrency()
+  location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[102,63] cannot find symbol
+  symbol:   method getRazorpayOrderId()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[103,65] cannot find symbol
+  symbol:   method getRazorpayPaymentId()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[104,64] cannot find symbol
+  symbol:   method getRazorpaySignature()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[117,67] cannot find symbol
+  symbol:   method getRazorpayOrderId()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[118,69] cannot find symbol
+  symbol:   method getRazorpayPaymentId()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[119,69] cannot find symbol
+  symbol:   method getRazorpaySignature()
+  location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[121,48] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[64,35] cannot find symbol
+  symbol:   method getOrderAddress()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[71,52] cannot find symbol
+  symbol:   method getOrderAddress()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[73,59] cannot find symbol
+  symbol:   method getProduct()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[74,56] cannot find symbol
+  symbol:   method getProduct()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[75,56] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[76,53] cannot find symbol
+  symbol:   method getPrice()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[77,59] cannot find symbol
+  symbol:   method getPaymentType()
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[41,29] cannot find symbol
+  symbol:   method setProduct(com.ecom.model.Product)
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[42,29] cannot find symbol
+  symbol:   method setUser(com.ecom.model.UserDtls)
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[43,29] cannot find symbol
+  symbol:   method setQuantity(int)
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[44,55] cannot find symbol
+  symbol:   method getDiscountPrice()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[48,46] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[49,48] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[49,69] cannot find symbol
+  symbol:   method getProduct()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[64,47] cannot find symbol
+  symbol:   method getProduct()
+  location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[64,83] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[65,26] cannot find symbol
+  symbol:   method setTotalPrice(java.lang.Double)
+  location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[67,26] cannot find symbol
+  symbol:   method setTotalOrderPrice(java.lang.Double)
+  location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[88,46] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[93,37] cannot find symbol
+  symbol:   method setQuantity(int)
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[98,46] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[99,29] cannot find symbol
+  symbol:   method setQuantity(int)
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[41,21] cannot find symbol
+  symbol:   method setRole(java.lang.String)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[42,21] cannot find symbol
+  symbol:   method setIsEnable(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[43,21] cannot find symbol
+  symbol:   method setAccountNonLocked(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[44,21] cannot find symbol
+  symbol:   method setFailedAttempt(int)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[47,68] cannot find symbol
+  symbol:   method getPassword()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[48,21] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[70,33] cannot find symbol
+  symbol:   method setIsEnable(java.lang.Boolean)
+  location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[79,35] cannot find symbol
+  symbol:   method getFailedAttempt()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[80,21] cannot find symbol
+  symbol:   method setFailedAttempt(int)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[87,21] cannot find symbol
+  symbol:   method setAccountNonLocked(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[88,21] cannot find symbol
+  symbol:   method setLockTime(java.util.Date)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[95,37] cannot find symbol
+  symbol:   method getLockTime()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[101,29] cannot find symbol
+  symbol:   method setAccountNonLocked(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[102,29] cannot find symbol
+  symbol:   method setFailedAttempt(int)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[103,29] cannot find symbol
+  symbol:   method setLockTime(<nulltype>)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[119,28] cannot find symbol
+  symbol:   method setResetToken(java.lang.String)
+  location: variable findByEmail of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[138,63] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[144,44] cannot find symbol
+  symbol:   method getName()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[145,52] cannot find symbol
+  symbol:   method getMobileNumber()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[146,47] cannot find symbol
+  symbol:   method getAddress()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[147,44] cannot find symbol
+  symbol:   method getCity()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[148,45] cannot find symbol
+  symbol:   method getState()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[149,47] cannot find symbol
+  symbol:   method getPincode()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[166,31] cannot find symbol
+  symbol:   method setProfileImage(java.lang.String)
+  location: variable dbUser of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[179,21] cannot find symbol
+  symbol:   method setRole(java.lang.String)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[180,21] cannot find symbol
+  symbol:   method setIsEnable(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[181,21] cannot find symbol
+  symbol:   method setAccountNonLocked(boolean)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[182,21] cannot find symbol
+  symbol:   method setFailedAttempt(int)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[185,68] cannot find symbol
+  symbol:   method getPassword()
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[186,21] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[39,28] cannot find symbol
+  symbol:   method getIsEnable()
+  location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[40,36] cannot find symbol
+  symbol:   method getAccountNonLocked()
+  location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[41,44] cannot find symbol
+  symbol:   method getFailedAttempt()
+  location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[113,21] cannot find symbol
+  symbol:   method setId(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[114,21] cannot find symbol
+  symbol:   method setEntity(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[115,21] cannot find symbol
+  symbol:   method setAmount(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[116,21] cannot find symbol
+  symbol:   method setAmountPaid(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[117,21] cannot find symbol
+  symbol:   method setAmountDue(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[118,21] cannot find symbol
+  symbol:   method setCurrency(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[119,21] cannot find symbol
+  symbol:   method setReceipt(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[120,21] cannot find symbol
+  symbol:   method setStatus(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[121,21] cannot find symbol
+  symbol:   method setAttempts(java.lang.Object)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[128,25] cannot find symbol
+  symbol:   method setCreatedAt(long)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[130,25] cannot find symbol
+  symbol:   method setCreatedAt(long)
+  location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[132,56] cannot find symbol
+  symbol:   method getId()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[152,35] cannot find symbol
+  symbol:   method setImage(java.lang.String)
+  location: variable oldProduct of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[162,40] cannot find symbol
+  symbol:   method getTitle()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[163,46] cannot find symbol
+  symbol:   method getDescription()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[164,43] cannot find symbol
+  symbol:   method getCategory()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[165,40] cannot find symbol
+  symbol:   method getPrice()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[166,40] cannot find symbol
+  symbol:   method getStock()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[167,43] cannot find symbol
+  symbol:   method getIsActive()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[168,43] cannot find symbol
+  symbol:   method getDiscount()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[171,38] cannot find symbol
+  symbol:   method getPrice()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[171,60] cannot find symbol
+  symbol:   method getDiscount()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[172,43] cannot find symbol
+  symbol:   method getPrice()
+  location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[173,23] cannot find symbol
+  symbol:   method setDiscountPrice(java.lang.Double)
+  location: variable oldProduct of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[25,23] cannot find symbol
+  symbol:   method setReviewDate(java.time.LocalDateTime)
+  location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[26,15] cannot find symbol
+  symbol:   method setIsApproved(boolean)
+  location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[65,19] cannot find symbol
+  symbol:   method setIsApproved(java.lang.Boolean)
+  location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[59,30] cannot find symbol
+  symbol:   method setOrderId(java.lang.String)
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[60,30] cannot find symbol
+  symbol:   method setOrderDate(java.time.LocalDate)
+  location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[62,46] cannot find symbol
+  symbol:   method getProduct()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[63,44] cannot find symbol
+  symbol:   method getProduct()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[65,47] cannot find symbol
+  symbol:   method getQuantity()
+  location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[66,43] cannot find symbol
+  symbol:   method getUser()
+  location: variable cart of type com.ecom.model.Cart
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.405 s
+[INFO] Finished at: 2026-06-18T00:02:13+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project Shopping_Cart: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[61,63] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[69,34] invalid method reference
+[ERROR]   cannot find symbol
+[ERROR]     symbol:   method getTotalPrice(T)
+[ERROR]     location: class com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[81,37] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[82,41] cannot find symbol
+[ERROR]   symbol:   method getAmount()
+[ERROR]   location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[83,43] cannot find symbol
+[ERROR]   symbol:   method getCurrency()
+[ERROR]   location: variable order of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[102,63] cannot find symbol
+[ERROR]   symbol:   method getRazorpayOrderId()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[103,65] cannot find symbol
+[ERROR]   symbol:   method getRazorpayPaymentId()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[104,64] cannot find symbol
+[ERROR]   symbol:   method getRazorpaySignature()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[117,67] cannot find symbol
+[ERROR]   symbol:   method getRazorpayOrderId()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[118,69] cannot find symbol
+[ERROR]   symbol:   method getRazorpayPaymentId()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[119,69] cannot find symbol
+[ERROR]   symbol:   method getRazorpaySignature()
+[ERROR]   location: variable paymentRequest of type com.ecom.dto.PaymentRequest
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/controller/RazorpayController.java:[121,48] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[64,35] cannot find symbol
+[ERROR]   symbol:   method getOrderAddress()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[71,52] cannot find symbol
+[ERROR]   symbol:   method getOrderAddress()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[73,59] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[74,56] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[75,56] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[76,53] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/util/CommonUtil.java:[77,59] cannot find symbol
+[ERROR]   symbol:   method getPaymentType()
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[41,29] cannot find symbol
+[ERROR]   symbol:   method setProduct(com.ecom.model.Product)
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[42,29] cannot find symbol
+[ERROR]   symbol:   method setUser(com.ecom.model.UserDtls)
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[43,29] cannot find symbol
+[ERROR]   symbol:   method setQuantity(int)
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[44,55] cannot find symbol
+[ERROR]   symbol:   method getDiscountPrice()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[48,46] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[49,48] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[49,69] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[64,47] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[64,83] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[65,26] cannot find symbol
+[ERROR]   symbol:   method setTotalPrice(java.lang.Double)
+[ERROR]   location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[67,26] cannot find symbol
+[ERROR]   symbol:   method setTotalOrderPrice(java.lang.Double)
+[ERROR]   location: variable c of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[88,46] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[93,37] cannot find symbol
+[ERROR]   symbol:   method setQuantity(int)
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[98,46] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/CartServiceImpl.java:[99,29] cannot find symbol
+[ERROR]   symbol:   method setQuantity(int)
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[41,21] cannot find symbol
+[ERROR]   symbol:   method setRole(java.lang.String)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[42,21] cannot find symbol
+[ERROR]   symbol:   method setIsEnable(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[43,21] cannot find symbol
+[ERROR]   symbol:   method setAccountNonLocked(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[44,21] cannot find symbol
+[ERROR]   symbol:   method setFailedAttempt(int)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[47,68] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[48,21] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[70,33] cannot find symbol
+[ERROR]   symbol:   method setIsEnable(java.lang.Boolean)
+[ERROR]   location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[79,35] cannot find symbol
+[ERROR]   symbol:   method getFailedAttempt()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[80,21] cannot find symbol
+[ERROR]   symbol:   method setFailedAttempt(int)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[87,21] cannot find symbol
+[ERROR]   symbol:   method setAccountNonLocked(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[88,21] cannot find symbol
+[ERROR]   symbol:   method setLockTime(java.util.Date)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[95,37] cannot find symbol
+[ERROR]   symbol:   method getLockTime()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[101,29] cannot find symbol
+[ERROR]   symbol:   method setAccountNonLocked(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[102,29] cannot find symbol
+[ERROR]   symbol:   method setFailedAttempt(int)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[103,29] cannot find symbol
+[ERROR]   symbol:   method setLockTime(<nulltype>)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[119,28] cannot find symbol
+[ERROR]   symbol:   method setResetToken(java.lang.String)
+[ERROR]   location: variable findByEmail of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[138,63] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[144,44] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[145,52] cannot find symbol
+[ERROR]   symbol:   method getMobileNumber()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[146,47] cannot find symbol
+[ERROR]   symbol:   method getAddress()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[147,44] cannot find symbol
+[ERROR]   symbol:   method getCity()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[148,45] cannot find symbol
+[ERROR]   symbol:   method getState()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[149,47] cannot find symbol
+[ERROR]   symbol:   method getPincode()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[166,31] cannot find symbol
+[ERROR]   symbol:   method setProfileImage(java.lang.String)
+[ERROR]   location: variable dbUser of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[179,21] cannot find symbol
+[ERROR]   symbol:   method setRole(java.lang.String)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[180,21] cannot find symbol
+[ERROR]   symbol:   method setIsEnable(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[181,21] cannot find symbol
+[ERROR]   symbol:   method setAccountNonLocked(boolean)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[182,21] cannot find symbol
+[ERROR]   symbol:   method setFailedAttempt(int)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[185,68] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/UserServiceImpl.java:[186,21] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable user of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[39,28] cannot find symbol
+[ERROR]   symbol:   method getIsEnable()
+[ERROR]   location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[40,36] cannot find symbol
+[ERROR]   symbol:   method getAccountNonLocked()
+[ERROR]   location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/config/AuthFailureHandlerImpl.java:[41,44] cannot find symbol
+[ERROR]   symbol:   method getFailedAttempt()
+[ERROR]   location: variable userDtls of type com.ecom.model.UserDtls
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[113,21] cannot find symbol
+[ERROR]   symbol:   method setId(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[114,21] cannot find symbol
+[ERROR]   symbol:   method setEntity(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[115,21] cannot find symbol
+[ERROR]   symbol:   method setAmount(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[116,21] cannot find symbol
+[ERROR]   symbol:   method setAmountPaid(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[117,21] cannot find symbol
+[ERROR]   symbol:   method setAmountDue(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[118,21] cannot find symbol
+[ERROR]   symbol:   method setCurrency(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[119,21] cannot find symbol
+[ERROR]   symbol:   method setReceipt(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[120,21] cannot find symbol
+[ERROR]   symbol:   method setStatus(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[121,21] cannot find symbol
+[ERROR]   symbol:   method setAttempts(java.lang.Object)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[128,25] cannot find symbol
+[ERROR]   symbol:   method setCreatedAt(long)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/RazorpayServiceImpl.java:[130,25] cannot find symbol
+[ERROR]   symbol:   method setCreatedAt(long)
+[ERROR]   location: variable response of type com.ecom.dto.RazorpayOrderResponse
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[132,56] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[152,35] cannot find symbol
+[ERROR]   symbol:   method setImage(java.lang.String)
+[ERROR]   location: variable oldProduct of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[162,40] cannot find symbol
+[ERROR]   symbol:   method getTitle()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[163,46] cannot find symbol
+[ERROR]   symbol:   method getDescription()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[164,43] cannot find symbol
+[ERROR]   symbol:   method getCategory()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[165,40] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[166,40] cannot find symbol
+[ERROR]   symbol:   method getStock()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[167,43] cannot find symbol
+[ERROR]   symbol:   method getIsActive()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[168,43] cannot find symbol
+[ERROR]   symbol:   method getDiscount()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[171,38] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[171,60] cannot find symbol
+[ERROR]   symbol:   method getDiscount()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[172,43] cannot find symbol
+[ERROR]   symbol:   method getPrice()
+[ERROR]   location: variable product of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ProductServiceImpl.java:[173,23] cannot find symbol
+[ERROR]   symbol:   method setDiscountPrice(java.lang.Double)
+[ERROR]   location: variable oldProduct of type com.ecom.model.Product
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[25,23] cannot find symbol
+[ERROR]   symbol:   method setReviewDate(java.time.LocalDateTime)
+[ERROR]   location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[26,15] cannot find symbol
+[ERROR]   symbol:   method setIsApproved(boolean)
+[ERROR]   location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/ReviewServiceImpl.java:[65,19] cannot find symbol
+[ERROR]   symbol:   method setIsApproved(java.lang.Boolean)
+[ERROR]   location: variable review of type com.ecom.model.Review
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[59,30] cannot find symbol
+[ERROR]   symbol:   method setOrderId(java.lang.String)
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[60,30] cannot find symbol
+[ERROR]   symbol:   method setOrderDate(java.time.LocalDate)
+[ERROR]   location: variable order of type com.ecom.model.ProductOrder
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[62,46] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[63,44] cannot find symbol
+[ERROR]   symbol:   method getProduct()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[65,47] cannot find symbol
+[ERROR]   symbol:   method getQuantity()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] /C:/Users/Rajeshmalviya/Documents/sts-workspace-youtube/Shopping_Cart3/src/main/java/com/ecom/service/impl/OrderServiceImpl.java:[66,43] cannot find symbol
+[ERROR]   symbol:   method getUser()
+[ERROR]   location: variable cart of type com.ecom.model.Cart
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

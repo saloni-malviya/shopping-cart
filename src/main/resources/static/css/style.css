@@ -3922,6 +3922,9 @@ min-width:82px;
 	    color: white;
 	}
 
-	
+	@media(max-width:768px){
+	    .container, .row, .navbar, .card, .category-section, .latest-products-section { padding-left:10px !important; padding-right:10px !important; }
+	    .carousel img { height:200px !important; }
+	}	
 
 

@@ -357,6 +357,45 @@ $resetPassword.validate({
 		}	
 })
 
+// Change Password Validation
+/*
+var $changePasswordForm = $("#changePasswordForm");
+
+$changePasswordForm.validate({
+
+	rules: {
+		currentPassword: {
+			required: true,
+			space: true
+		},
+		newPassword: {
+			required: true,
+			space: true
+		},
+		confirmPassword: {
+			required: true,
+			space: true,
+			equalTo: '#newPass'
+		}
+	},
+
+	messages: {
+		currentPassword: {
+			required: 'current password must be required',
+			space: 'space not allowed'
+		},
+		newPassword: {
+			required: 'new password must be required',
+			space: 'space not allowed'
+		},
+		confirmPassword: {
+			required: 'confirm password must be required',
+			space: 'space not allowed',
+			equalTo: 'password mismatch'
+		}
+	}
+});
+  */
 	
 })
 
